@@ -1,0 +1,196 @@
+<Schema name="Airlines">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="aeropuerto">
+    <Hierarchy name="leg_radar_type" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="leg_radar_type" visible="true" table="aeropuerto" column="leg_radar_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="leg_type" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="leg_type" visible="true" table="aeropuerto" column="leg_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="leg_city" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="leg_city" visible="true" table="aeropuerto" column="leg_city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="leg_name" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="leg_name" visible="true" table="aeropuerto" column="leg_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="leg_key" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="leg_key" visible="true" table="aeropuerto" column="leg_key" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="city" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="city" visible="true" table="aeropuerto" column="city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="state" visible="true" hasAll="true" primaryKey="idaeropuerto">
+      <Table name="aeropuerto">
+      </Table>
+      <Level name="state" visible="true" table="aeropuerto" column="state" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="canal">
+    <Hierarchy name="channel_name" visible="true" hasAll="true" primaryKey="idcanal">
+      <Table name="canal">
+      </Table>
+      <Level name="channel_name" visible="true" table="canal" column="channel_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="channel_key" visible="true" hasAll="true" primaryKey="idcanal">
+      <Table name="canal">
+      </Table>
+      <Level name="channel_key" visible="true" table="canal" column="channel_key" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="cliente">
+    <Hierarchy name="customer_info" visible="true" hasAll="true" primaryKey="idcliente">
+      <Table name="cliente">
+      </Table>
+      <Level name="customer_sex" visible="true" table="cliente" column="customer_sex" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_marital" visible="true" table="cliente" column="customer_marital" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_birth_date" visible="true" table="cliente" column="customer_birth_date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_income" visible="true" table="cliente" column="customer_income" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_type" visible="true" table="cliente" column="customer_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="customer_location" visible="true" hasAll="true" primaryKey="idcliente">
+      <Table name="cliente">
+      </Table>
+      <Level name="customer_zip" visible="true" table="cliente" column="customer_zip" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_state" visible="true" table="cliente" column="customer_state" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_city" visible="true" table="cliente" column="customer_city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="customer_address" visible="true" table="cliente" column="customer_address" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="customer_name" visible="true" hasAll="true" primaryKey="idcliente">
+      <Table name="cliente">
+      </Table>
+      <Level name="customer_name" visible="true" table="cliente" column="customer_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="customer_key" visible="true" hasAll="true" primaryKey="idcliente">
+      <Table name="cliente">
+      </Table>
+      <Level name="customer_key" visible="true" table="cliente" column="customer_key" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="tarifa">
+    <Hierarchy name="restriction_type" visible="true" hasAll="true" primaryKey="idtarifa">
+      <Table name="tarifa">
+      </Table>
+      <Level name="restriction_type" visible="true" table="tarifa" column="restriction_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="fare_class_description" visible="true" hasAll="true" primaryKey="idtarifa">
+      <Table name="tarifa">
+      </Table>
+      <Level name="fare_class_description" visible="true" table="tarifa" column="fare_class_description" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="fare_class_code" visible="true" hasAll="true" primaryKey="idtarifa">
+      <Table name="tarifa">
+      </Table>
+      <Level name="fare_class_description" visible="true" table="tarifa" column="fare_class_description" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="fare_class_key" visible="true" hasAll="true" primaryKey="idtarifa">
+      <Table name="tarifa">
+      </Table>
+      <Level name="fare_class_key" visible="true" table="tarifa" column="fare_class_key" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="vuelo">
+    <Hierarchy name="vuelo_info" visible="true" hasAll="true" primaryKey="idvuelo">
+      <Table name="vuelo">
+      </Table>
+      <Level name="coach_capacity" visible="true" table="vuelo" column="coach_capacity" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="business_capacity" visible="true" table="vuelo" column="business_capacity" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="first_class_capacity" visible="true" table="vuelo" column="first_class_capacity" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="seat_capacity" visible="true" table="vuelo" column="seat_capacity" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="airplane_type" visible="true" table="vuelo" column="airplane_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="sched_arrival" visible="true" hasAll="true" primaryKey="idvuelo">
+      <Table name="vuelo">
+      </Table>
+      <Level name="sched_arrival" visible="true" table="vuelo" column="sched_arrival" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="sched_depart" visible="true" hasAll="true" primaryKey="sched_depart">
+      <Table name="vuelo">
+      </Table>
+      <Level name="sched_depart" visible="true" table="vuelo" column="sched_depart" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="flight_key" visible="true" hasAll="true" primaryKey="idvuelo">
+      <Table name="vuelo">
+      </Table>
+      <Level name="flight_key" visible="true" table="vuelo" column="flight_key" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="trayecto" visible="true" cache="true" enabled="true">
+    <Table name="trayecto">
+    </Table>
+    <DimensionUsage source="aeropuerto" name="aeropuerto_origen_trayecto" visible="true" foreignKey="aeropuerto_origen_trayecto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="aeropuerto" name="aeropuerto_origen_itinerario" visible="true" foreignKey="aeropuerto_origen_itinerario" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="aeropuerto" name="aeropuerto_destino_trayecto" visible="true" foreignKey="aeropuerto_destino_trayecto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="aeropuerto" name="aeropuerto_destino_itinerario" visible="true" foreignKey="aeropuerto_destino_itinerario" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="cliente" name="cliente" visible="true" foreignKey="cliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="canal" name="canal" visible="true" foreignKey="canal" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tarifa" name="tarifa" visible="true" foreignKey="tarifa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="vuelo" name="vuelo" visible="true" foreignKey="vuelo" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="ticket_number" column="ticket_number" datatype="Numeric" aggregator="count" visible="true">
+    </Measure>
+    <Measure name="total_minutes_late" column="minutes_late" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="total_miles" column="miles" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="total_fare" column="fare" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="average_minutes_late" column="minutes_late" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="average_fare" column="fare" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="average_miles" column="miles" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="ticket_umber_sum" column="ticket_number" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
